@@ -23,7 +23,6 @@ Borrower -->(归还图书)
 @enduml
 ```
 
-
 ### 1.2. 借阅者用例图如下：
 
 参见图7.6
@@ -35,12 +34,19 @@ Borrower -->(归还图书)
  
 ``` usecase
 @startuml
-
-User -> (Start)
-User --> (Use the application) : A small label
-
-:Main Admin: ---> (Use the application) : This is\nyet another\nlabel
-
+:图书管理员: as admin
+left to right direction
+admin-->(图书借阅处理)
+admin-->(图书归还处理)
+admin-->(登录图书管理系统)
+(登录图书管理系统)-->(查询借阅者信息)
+(登录图书管理系统)-->(添加图书信息)
+(登录图书管理系统)-->(查询图书信息)
+(登录图书管理系统)-->(修改图书信息)
+(登录图书管理系统)-->(删除图书信息)
+(图书借阅处理)<..(删除预定):<<extend>>
+(图书借阅处理)..>(检查用户合法性):<<include>>
+(图书归还处理)<..(收取罚金):<<extend>>
 @enduml
 ```
 
@@ -55,12 +61,26 @@ User --> (Use the application) : A small label
  
 ``` usecase
 @startuml
-
-User -> (Start)
-User --> (Use the application) : A small label
-
-:Main Admin: ---> (Use the application) : This is\nyet another\nlabel
-
+:系统管理员: as ad
+left to right direction
+ad-->(添加数目)
+ad-->(添加图书信息)
+ad-->(查询图书信息)
+ad-->(修改图书信息)
+ad-->(删除图书信息)
+ad-->(添加读者信息)
+ad-->(删除读者信息)
+ad-->(修改读者信息)
+ad-->(查询读者信息)
+(添加数目)..>(登录系统):<<include>>
+(添加图书信息)..>(登录系统):<<include>>
+(查询图书信息)..>(登录系统):<<include>>
+(修改图书信息)..>(登录系统):<<include>>
+(删除图书信息)..>(登录系统):<<include>>
+(添加读者信息)..>(登录系统):<<include>>
+(删除读者信息)..>(登录系统):<<include>>
+(修改读者信息)..>(登录系统):<<include>>
+(查询读者信息)..>(登录系统):<<include>>
 @enduml
 ```
 

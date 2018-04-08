@@ -25,9 +25,8 @@ Borrower -->(归还图书)
 
 ### 1.2. 借阅者用例图如下：
 
-参见图7.6
 
-![usecase](usecase.png)
+![usecase](reader.png)
 
  
 ### 1.3. 图书管理员用例图PlantUML源码如下：
@@ -52,9 +51,8 @@ admin-->(登录图书管理系统)
 
 ### 1.4. 图书管理员用例图如下：
 
-参见图7.6
 
-![usecase](usecase.png)
+![usecase](reader1.png)
 
 
 ### 1.5. 系统管理员用例图PlantUML源码如下：
@@ -87,9 +85,8 @@ ad-->(查询读者信息)
 
 ### 1.6. 系统管理员用例图如下：
 
-参见图7.6
 
-![usecase](usecase.png)
+![usecase](reader2.png)
 
 
 ## 2. 参与者说明：

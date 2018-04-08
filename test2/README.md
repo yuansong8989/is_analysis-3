@@ -10,12 +10,16 @@
 
 ``` usecase
 @startuml
-
-User -> (Start)
-User --> (Use the application) : A small label
-
-:Main Admin: ---> (Use the application) : This is\nyet another\nlabel
-
+:借阅者: as Borrower
+left to right direction
+Borrower -->(查找图书)
+Borrower -->(查询个人信息)
+Borrower -->(预定图书)
+Borrower -->(借阅图书)
+Borrower -->(归还图书)
+(归还图书)<..(缴纳罚金):<<extend>>
+(查询个人信息)...>(登录系统):<<include>>
+(预定图书)...>(登录系统):<<include>>
 @enduml
 ```
 

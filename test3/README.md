@@ -79,28 +79,95 @@ admin_图书管理员类可以对图书信息类和借阅信息类进行所有�
 ``` 
 
 ## 2. 图书管理系统的对象图
-### 2.1 类user的对象图
+### 2.1 图书信息类的对象图
 #### 源码如下：
 ``` class
 @startuml
-object user {
-name = "Dummy"
-id = 123
+class Book_图书信息类{
+     +String  ISBN
+        +String BookNumber
+        +int Inventory
+        +add()
+        +find()
+        +delete()
+        +update()
 }
 @enduml
 ``` 
 #### 对象图如下：
-![class](object1.png)
+![class](class2.png)
 
-### 2.2 类***的对象图
+### 2.2 借阅者类的对象图
+#### 源码如下：
+``` class
+class Reader_借阅者{
+    +String  ID
+    +String  name
+    +int  maxBorrowNum
+    +int  maxBorrowDays
+    +int  borrowNum
+    +find()
+    +borrow()
+    +returnDate()
+}
+``` 
+#### 对象图如下：
+![class](class3.png)
+
+### 2.3 借阅信息类的对象图
 #### 源码如下：
 ``` class
 @startuml
-object user2 {
-name = "Dummy"
-id = 123
+class Borrow_借阅信息类{
+    +String  ISBN
+    +String  readerId
+    +boolean  isOvertime
+    +Date  lendDate
+    +Date  returnDate
+    +add()
+    +delete()
+    +update()
+    +find()
+    +save()
 }
 @enduml
 ``` 
 #### 对象图如下：
-![class](object1.png)
+![class](class4.png)
+
+### 2.4 图书管理员类的对象图
+#### 源码如下：
+``` class
+@startuml
+class admin_图书管理员{
+    String adminID
+    String adminName
+    +add()
+    +find()
+    +update()
+    +delete
+    +payFine()
+}
+@enduml
+``` 
+#### 对象图如下：
+![class](class5.png)
+
+### 2.4 图书描述类的对象图
+#### 源码如下：
+``` class
+@startuml
+class BookDescribeInfo_图书描述{
+    +String ISBN
+    +String bookName
+    +String bookType
+    +String describe
+    +double price
+    +String author
+    +String bookVersion
+}
+@enduml
+``` 
+#### 对象图如下：
+![class](class6.png)
+

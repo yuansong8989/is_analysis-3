@@ -104,8 +104,7 @@ class Reader_借阅者{
     +String  ID
     +String  name
     +int  maxBorrowNum
-    +int  maxBorrowDays
-    +int  borrowNum
+    +int  maxBorrowDays5    +int  borrowNum
     +find()
     +borrow()
     +returnDate()
@@ -153,7 +152,7 @@ class admin_图书管理员{
 #### 对象图如下：
 ![class](class5.png)
 
-### 2.4 图书描述类的对象图
+### 2.5 图书描述类的对象图
 #### 源码如下：
 ``` class
 @startuml

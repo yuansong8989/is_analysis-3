@@ -21,7 +21,7 @@ admin->图书管理系统:login()
 activate 图书管理系统
 admin<-图书管理系统:showReaderInfo()
 admin<-图书管理系统:1.check()
-图书管理系统->读者:getBookInfo()
+  图书管理系统->读者:getBookInfo()
 activate 读者
 图书管理系统->读者:2.check()
 deactivate 读者
@@ -55,19 +55,19 @@ deactivate admin
 ![class](wc1.png)
 
 ## 1.3. 借书用例顺序图说明
-
-1.login()：借阅者把需借图书和借书卡号提供给图书管理员，图书管理员登陆图书管理系统函数。
-2.showReaderInfo()：登录系统后通过借书卡号显示该借阅者的信息函数。
-3.check()：检查该借阅者的合法性函数。
-4.getReaderInfo()：获取读者的相关信息函数。
-5.check()：检查该读者的借书限额，是否超限的函数。
-6.getBookInfo()：获取需借图书的相关信息函数。
-7.borrow()：借阅者的借书函数。
-8.builtBookInfo()：创建借书记录的函数。
-9.updateBookInfo()：更新图书信息的函数，标记该图书的状态为已借。
-10.updateReaderInfo()：更新读者的借书信息函数。
-11.isBorrow()：借阅成功的函数。
-
+```
+1. login()：借阅者把需借图书和借书卡号提供给图书管理员，图书管理员登陆图书管理系统函数。
+2. showReaderInfo()：登录系统后通过借书卡号显示该借阅者的信息函数。
+3. check()：检查该借阅者的合法性函数。
+4. getReaderInfo()：获取读者的相关信息函数。
+5. check()：检查该读者的借书限额，是否超限的函数。
+6. getBookInfo()：获取需借图书的相关信息函数。
+7. borrow()：借阅者的借书函数。
+8. builtBookInfo()：创建借书记录的函数。
+9. updateBookInfo()：更新图书信息的函数，标记该图书的状态为已借。
+10. updateReaderInfo()：更新读者的借书信息函数。
+11. isBorrow()：借阅成功的函数。
+```
 
 ## 2. 还书用例
 ## 2.1. 还书用例PlantUML源码
@@ -117,6 +117,7 @@ deactivate admin
 ![class](wc2.png)
 
 ## 2.3. 还书用例顺序图说明
+```
 1.login()：借阅者提供还书书籍，管理员登陆该系统的函数。
 2.getBookInfo()：扫描该书籍的书号，获取相关图书信息的函数。
 3.getBorrowInfo()：获取借阅记录的信息的函数。
@@ -128,3 +129,4 @@ deactivate admin
 9.updateReaderInfo()：更新读者的还书信息的函数。
 10.record()：记录借阅者的逾期记录的函数。
 11.return：返回还书成功。
+```

@@ -67,7 +67,7 @@ deactivate admin
 9. updateBookInfo()：更新图书信息的函数，标记该图书的状态为已借。
 10. updateReaderInfo()：更新读者的借书信息函数。
 11. isBorrow()：借阅成功的函数。
-```
+  ```
 
 ## 2. 还书用例
 ## 2.1. 还书用例PlantUML源码
@@ -118,15 +118,15 @@ deactivate admin
 
 ## 2.3. 还书用例顺序图说明
 ```
-1.login()：借阅者提供还书书籍，管理员登陆该系统的函数。
-2.getBookInfo()：扫描该书籍的书号，获取相关图书信息的函数。
-3.getBorrowInfo()：获取借阅记录的信息的函数。
-4.getBorrowDate()：获取借阅该书籍的日期的函数。
-5.getNowDate()：获取当前时间的日期的函数。
-6.isOverTime()：判断该借阅者的借书时间是否超时的函数。
-7.builtReturnInfo()：创建还书记录的函数。
-8.updateBookInfo()：更新图书馆里的书籍信息的函数，标记该图书的状态为可借。
-9.updateReaderInfo()：更新读者的还书信息的函数。
-10.record()：记录借阅者的逾期记录的函数。
-11.return：返回还书成功。
+1. login()：借阅者提供还书书籍，管理员登陆该系统的函数。
+2. getBookInfo()：扫描该书籍的书号，获取相关图书信息的函数。
+3. getBorrowInfo()：获取借阅记录的信息的函数。
+4. getBorrowDate()：获取借阅该书籍的日期的函数。
+5. getNowDate()：获取当前时间的日期的函数。
+6. isOverTime()：判断该借阅者的借书时间是否超时的函数。
+7. builtReturnInfo()：创建还书记录的函数。
+8. updateBookInfo()：更新图书馆里的书籍信息的函数，标记该图书的状态为可借。
+9. updateReaderInfo()：更新读者的还书信息的函数。
+10. record()：记录借阅者的逾期记录的函数。
+11. return：返回还书成功。
 ```

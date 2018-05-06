@@ -1,4 +1,4 @@
-# 实验5：图书管理系统数据库设计与界面设计（老师示范）
+# 实验5：图书管理系统数据库设计与界面设计
 |学号|班级|姓名|照片|
 |:-------:|:-------------: | :----------:|:---:|
 |201510414122|软件(本)15-1|吴川|![flow1](../myself.jpg)|
@@ -59,33 +59,58 @@
 - 顺序图参见：借书顺序图
 - API接口如下：
 
-1. 获取全部分类
+1. 借阅者API
 
-- 功能：用于获取全部分类
-- 请求地址： http://[YOUR_DOMAIN]/v1/api/shop_cate
+- 功能：获取用户基本信息
+- 请求地址： http://localhost:8080/bookManage/v1/api/ user_list
+- 请求方法：GET
+- 请求参数：
+
+|参数名称|必填|说明|
+|:-------:|:-------------: | :----------:|
+|ID|是|借阅者的uid|
+|access_roken|是|用于验证请求合法性的认证信息。 |
+|method|是|固定为 “GET”。|
+
+- 返回示例：
+```
+{
+  "data": [
+        {
+            "uid": "201510414122",
+            "nickname": "吴川",
+            
+          
+        }
+    ],
+    "code": 200
+}
+```
+- 返回参数说明：
+    
+|参数名称|说明|
+|:-------:|:-------------: |
+|data|用户的个人基本信息|
+|code|返回码|
+
+2. 验证API
+- 功能：用于验证借阅者id是否存在
+- 请求地址： http://localhost:8080/bookManage/v1/api/checking
 - 请求方法：POST
 - 请求参数：
 
 |参数名称|必填|说明|
 |:-------:|:-------------: | :----------:|
+|ID|是|借阅者的uid|
+|action|是|固定为 “checkID”。|
 |access_token|是|用于验证请求合法性的认证信息。 |
 |method|是|固定为 “GET”。|
 
 - 返回实例：
 ```
 {
-    "info": "感谢您的支持。",
-    "data": {
-        "nickname": "O记_Mega可达鸭",
-        "uid": "14361",
-        "signature": "呀  一不小心就进化了",
-        "score1": "322",
-        "real_nickname": "O记_Mega可达鸭",
-        "title": "Lv3 转正",
-        "avatar128": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/128x128!",
-        "avatar512": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/512x512!"
-    },
-    "code": 200
+    "info":"验证成功",
+    "code":200
 }
 ```
 - 返回参数说明：
@@ -93,44 +118,7 @@
 |参数名称|说明|
 |:-------:|:-------------: |
 |Info|返回信息|
-|data|用户的个人信息|
-|dodo|返回码|
-
-2. *******API
-- 功能：用于获取全部分类
-- 请求地址： http://[YOUR_DOMAIN]/v1/api/shop_cate
-- 请求方法：POST
-- 请求参数：
-
-|参数名称|必填|说明|
-|:-------:|:-------------: | :----------:|
-|access_token|是|用于验证请求合法性的认证信息。 |
-|method|是|固定为 “GET”。|
-
-- 返回实例：
-```
-{
-    "info": "感谢您的支持。",
-    "data": {
-        "nickname": "O记_Mega可达鸭",
-        "uid": "14361",
-        "signature": "呀  一不小心就进化了",
-        "score1": "322",
-        "real_nickname": "O记_Mega可达鸭",
-        "title": "Lv3 转正",
-        "avatar128": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/128x128!",
-        "avatar512": "http://upload.opensns.cn/Uploads_Avatar_14361_58e4b58fccf81.jpg?imageMogr2/crop/!260x260a6a22/thumbnail/512x512!"
-    },
-    "code": 200
-}
-```
-- 返回参数说明：
-    
-|参数名称|说明|
-|:-------:|:-------------: |
-|Info|返回信息|
-|data|用户的个人信息|
-|dodo|返回码|
+|code|返回码|
 
 
  

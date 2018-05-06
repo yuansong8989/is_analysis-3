@@ -8,41 +8,46 @@
 ## 1.1. 图书描述类表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|bookName|varchar2(100)| |否||||
-|bookType|varchar2(100)| |是||||
-|describe|varchar2(100)| |是||||
-|price|varchar2(100)| |是||||
-|author|varchar2(100)| |是||||
-|bookVersion|varchar2(100)| |是||||
+|ISBN|varchar(50)|主键|否||||
+|bookName|varchar(50)| |否||||
+|bookType|varchar(50)| |否||||
+|describe|varchar(200)| |否||||
+|price|double| |否||||
+|author|varchar(50)| |否||||
+|bookVersion|varchar(50)| |否||||
 
-## 1.2. 管理员信息表
+## 1.2. 图书表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Memo|varchar2(100)| |是||||
+|ISBN|varchar(50)|主键|否||||
+|bookName|varchar(50)| |否||||
+|bookNumber|varchar(50)| |否||||
+|Inventory|int| |是||||
 
 ## 1.3. 借阅者信息表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Memo|varchar2(100)| |是||||
+|ID|varchar(50)|主键|否||||
+|name|varchar(50)| |否||||
+|maxBorrowNum|int| |否||||
+|maxBorrowDays|int| |否||||
+|borrowNum|int| |是||||
 
 ## 1.4. 管理员信息表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Memo|varchar2(100)| |是||||
+|ID|varchar(50)|主键|否||||
+|name|varchar(50)| |否||||
 
 ## 1.5. 借阅信息类表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Memo|varchar2(100)| |是||||
+|ISBN|varchar(50)|主键|否||||
+|ID|varchar(50)| |否||||
+|isOvertime|Bit| |否||||
+|lendDate|Datetime| |否||||
+|returnDate|Datetime| |否||||
+
 
 ***
 

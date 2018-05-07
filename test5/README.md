@@ -8,45 +8,46 @@
 ## 1.1. 图书描述类表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar(50)|主键|否||||
-|bookName|varchar(50)| |否||||
-|bookType|varchar(50)| |否||||
-|describe|varchar(200)| |否||||
-|price|double| |否||||
-|author|varchar(50)| |否||||
-|bookVersion|varchar(50)| |否||||
+|ISBN|varchar(50)|主键|否|||图书描述类表的主键，标记唯一记录|
+|bookName|varchar(50)| |否|||图书的属性书名|
+|bookType|varchar(50)| |否|||图书的属性类型|
+|describe|varchar(200)| |否|||对图书的相关描述和简介|
+|price|double| |否|||图书的价格|
+|author|varchar(50)| |否|||图书的作者|
+|bookVersion|varchar(50)| |否|||图书版本|
 
 ## 1.2. 图书表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar(50)|主键|否||||
-|bookName|varchar(50)| |否||||
-|bookNumber|varchar(50)| |否||||
-|Inventory|int| |是||||
+|bookNumber|varchar(50)|主键 |否|||图书表的主键，系统对图书的编号|
+|ISBN|varchar(50)|外键|否|||图书表的外键，与图书描述类表相关联|
+|bookName|varchar(50)| |否|||图书书名|
+|Inventory|int| |是|||图书的库存|
 
 ## 1.3. 借阅者信息表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ID|varchar(50)|主键|否||||
-|name|varchar(50)| |否||||
-|maxBorrowNum|int| |否||||
-|maxBorrowDays|int| |否||||
-|borrowNum|int| |是||||
+|ID|varchar(50)|主键|否|||借阅者的借书卡号，借阅者信息表的主键|
+|ISBN|varchar(50)|外键 |否|||图书书号，借阅者信息表的外键，与图书描述类表相关联|
+|name|varchar(50)| |否|||借阅者姓名|
+|maxBorrowNum|int| |否|||对借阅者的最大限制借书量|
+|maxBorrowDays|int| |否|||借阅时限|
+|borrowNum|int| |是|||借阅者的借书量|
 
 ## 1.4. 管理员信息表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ID|varchar(50)|主键|否||||
-|name|varchar(50)| |否||||
+|ID|varchar(50)|主键|否|||管理员账号|
+|name|varchar(50)| |否|||管理员姓名|
 
 ## 1.5. 借阅信息类表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ID|varchar(50)|主键 |否||||
-|ISBN|varchar(50)|外键|否||||
-|isOvertime|Bit| |否||||
-|lendDate|Datetime| |否||||
-|returnDate|Datetime| |否||||
+|ID|varchar(50)|主键 |否|||借阅者的借书卡号，借阅信息类表的主键|
+|ISBN|varchar(50)|外键|否|||书号，借阅信息类表的外键，与图书描述类表相关联|
+|isOvertime|Bit| |否|||判断借阅时间是否超时|
+|lendDate|Datetime| |否|||借书日期|
+|returnDate|Datetime| |否|||还书日期|
 
 
 ***

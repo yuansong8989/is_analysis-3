@@ -19,3 +19,10 @@
     
 ## 2. 系统总体结构
 ![](系统总体结构.png)
+界面设计参见：https://wuchuan11.github.io/is_analysis/test6/ui/index.html
+    
+## 3. 用例图设计 [源码](src/UseCase.puml)
+![](UseCase.png)
+
+## 4. 类图设计 [源码](src/class.puml)
+![](./class.png)

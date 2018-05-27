@@ -44,8 +44,9 @@ cC﻿<!-- markdownlint-disable MD033-->
 
     |字段|类型|主键，外键|可以为空|默认值|约束|说明|
     |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
-    |TEACHER_ID|VARCHAR2(50 BYTE)|主键|否| | | 老师的编号|
+    |TEACHER_ID|VARCHAR2(50 BYTE)|主键|否| | | 教师的编号|
     |USER_ID|NUMBER(8,0)|外键|是| | | 老师的用户ID，USERS表的外键|
+    |TEACHER_NAME|VARCHAR2(50 BYTE)| |否| | | 教师姓名|
     |DEPARTMENT|VARCHAR2(400 BYTE)| |否| | | 老师属于的部门|
 
 - ### STUDENTS表（学生表）
@@ -54,7 +55,8 @@ cC﻿<!-- markdownlint-disable MD033-->
     |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
     |STUDENT_ID|VARCHAR2(50 BYTE)|主键|否| | | 学生的学号|
     |USER_ID|NUMBER(8,0)|外键|是| |空| 学生的用户ID，USERS表的外键，为空表示还没有建立用户|
-    |CLASS|VARCHAR2(20 BYTE)| |否| | | 老师属于的部门|
+    |STUDENT_NAME|VARCHAR2(50 BYTE)| |否| | | 学生姓名|
+    |CLASS|VARCHAR2(20 BYTE)| |否| | | 学生所在的班级|
     |RESULT_SUM|VARCHAR2(400 BYTE)|外键|是|空| | 成绩汇总（来自GRADES表），以逗号分开，第一个成绩是平均成绩,后面是每次实验的成绩，N表示未批改，平均分只计算已批改的。比如：“81.25,70,80,85,90,N”表示一共批改了4次，第5次未批改，4次的成绩分别是81.25,70,80,85,90,N，4次的平均分是81.25|
     |WEB_SUM|VARCHAR2(400 BYTE)| |是|空| | GitHub网址是否正确，用逗号分开，Y代表正确，N代表不正确。第1位代表总的GitHUB地址是否正确，第2位表示第1次实验的地址，第3位表示第2位实验地址，依此类推。比如：“Y,Y,Y,Y,Y,N”表示第5次实验地址不正确，其他地址正确|
  
@@ -82,7 +84,7 @@ cC﻿<!-- markdownlint-disable MD033-->
     |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
     |COURSE_ID|NUMBER(6,0)|主键|否| | | 课程编号|
     |STUDENT_ID|VARCHAR2(50 BYTE)|联合主键1，外键 |否| | | 学生的学号，STUDENTS表外键|
-    |TEACHER_ID|VARCHAR2(50 BYTE)|联合主键2，外键 |否| | | 教师的工号，TEACHERS表外键|
+    |TEACHER_ID|VARCHAR2(50 BYTE)|联合主键2，外键 |否| | | 教师的编号，TEACHERS表外键|
     |COURSE_NAME|VARCHAR2(100 BYTE)| |否| | | 课程名称|
     |COURSE_HOUR|VARCHAR2(100 BYTE)| |否| | | 课程学时|
  
@@ -92,18 +94,23 @@ cC﻿<!-- markdownlint-disable MD033-->
     |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
     |TERM_ID|NUMBER(6,0)|主键|否| | | 学期编号|
     |STUDENT_ID|VARCHAR2(50 BYTE)|联合主键1，外键 |否| | | 学生的学号，STUDENTS表外键|
-    |TEACHER_ID|VARCHAR2(50 BYTE)|联合主键2，外键 |否| | | 教师的工号，TEACHERS表外键|
+    |TEACHER_ID|VARCHAR2(50 BYTE)|联合主键2，外键 |否| | | 教师的编号，TEACHERS表外键|
     |TERM_YEAR|VARCHAR2(100 BYTE)| |否| | | 学年|
     
     
 
 ## 6. 用例及界面详细设计
-- ### [“学生列表”用例](./用例/学生列表.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/index.html)
-- ### [“评定成绩”用例](./用例/评定成绩.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/评定成绩.html)
-- ### [“查看成绩”用例](./用例/查看成绩.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/查看成绩.html)
-- ### [“修改密码”用例](./用例/修改密码.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“修改用户信息”用例](./用例/修改用户信息.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“查看用户信息”用例](./用例/查看用户信息.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“登出”用例](./用例/登出.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“登录”用例](./用例/登录.md),[界面](https://zwdbox.github.io/is_analysis/test6/ui/登录.html)
+- ### [“学生列表”用例](./用例/学生列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/index.html)
+- ### [“评定成绩”用例](./用例/评定成绩.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/评定成绩.html)
+- ### [“查看成绩”用例](./用例/查看成绩.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/查看成绩.html)
+- ### [“修改密码”用例](./用例/修改密码.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
+- ### [“修改用户信息”用例](./用例/修改用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
+- ### [“查看用户信息”用例](./用例/查看用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
+- ### [“教师列表”用例](./用例/教师列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生选课.html)
+- ### [“课程列表”用例](./用例/课程列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
+- ### [“老师选课”用例](./用例/老师选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
+- ### [“学生选课”用例](./用例/学生选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生选课.html)
+- ### [“选学期”用例](./用例/选学期.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/选学期.html)
+- ### [“登出”用例](./用例/登出.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
+- ### [“登录”用例](./用例/登录.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/登录.html)
     

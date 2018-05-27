@@ -1,4 +1,4 @@
-C﻿<!-- markdownlint-disable MD033-->
+cC﻿<!-- markdownlint-disable MD033-->
 <!-- 禁止MD033类型的警告 https://www.npmjs.com/package/markdownlint -->
 
 # 基于GitHub的实验管理平台的分析与设计
@@ -24,5 +24,5 @@ C﻿<!-- markdownlint-disable MD033-->
 ## 3. 用例图设计 [源码](src/UseCase.puml)
 ![](UseCase.png)
 
-## 4. 类图设计 [源码](src/class.puml)
+## 4. 类图设计 [源码](src/Class.puml)
 ![](./Class.png)

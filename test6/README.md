@@ -108,7 +108,7 @@ cC﻿<!-- markdownlint-disable MD033-->
 - ### [“查看用户信息”用例](./用例/查看用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
 - ### [“教师列表”用例](./用例/教师列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生选课.html)
 - ### [“课程列表”用例](./用例/课程列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
-- ### [“老师选课”用例](./用例/老师选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
+- ### [“教师选课”用例](./用例/老师选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
 - ### [“学生选课”用例](./用例/学生选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生选课.html)
 - ### [“选学期”用例](./用例/选学期.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/选学期.html)
 - ### [“登出”用例](./用例/登出.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)

@@ -1,7 +1,7 @@
 ﻿<!-- markdownlint-disable MD033-->
 <!-- 禁止MD033类型的警告 https://www.npmjs.com/package/markdownlint -->
 
-# 接口：getStudents  [返回](../README.md)
+# Interface：getStudents  [返回](../README.md)
 用例： [学生列表](../UseCase/学生列表.md)
 
 - 权限：

@@ -31,6 +31,7 @@
                 "COURSE_ID": "2",
                 "COURSE_NAME": "信息系统分析与设计",
                 "COURSE_HOUR": 48,
+                }，
                 {
                 ...其他课程
                 }

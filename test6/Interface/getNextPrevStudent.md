@@ -2,7 +2,7 @@
 <!-- 禁止MD033类型的警告 https://www.npmjs.com/package/markdownlint -->
 
 # 接口：getNextPrevStudent  [返回](../README.md)
-用例： [评定成绩](../UseCase/评定成绩.md)
+用例： [评定成绩](../Use Case/评定成绩.md)
 
 - 功能：
     返回一个学生的上一个或者下一个学生的学号。

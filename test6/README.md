@@ -19,7 +19,7 @@ cC﻿<!-- markdownlint-disable MD033-->
     
 ## 2. 系统总体结构
 ![](系统总体结构.png)
-界面设计参见：https://wuchuan11.github.io/is_analysis/test6/ui/index.html
+界面设计参见：https://wuchuan11.github.io/is_analysis/test6/ui/菜单页面.html
     
 ## 3. 用例图设计 [源码](src/UseCase.puml)
 ![](UseCase.png)
@@ -34,17 +34,17 @@ cC﻿<!-- markdownlint-disable MD033-->
     
 
 ## 6. 用例及界面详细设计
-- ### [“学生列表”用例](./UseCase/学生列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/index.html)
+- ### [“学生列表”用例](./UseCase/学生列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生列表.html)
 - ### [“评定成绩”用例](./UseCase/评定成绩.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/评定成绩.html)
 - ### [“查看成绩”用例](./UseCase/查看成绩.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/查看成绩.html)
-- ### [“修改密码”用例](./UseCase/修改密码.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“修改用户信息”用例](./UseCase/修改用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“查看用户信息”用例](./UseCase/查看用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
-- ### [“教师列表”用例](./UseCase/教师列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生选课.html)
-- ### [“课程列表”用例](./UseCase/课程列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
-- ### [“教师选课”用例](./UseCase/老师选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/老师选课.html)
+- ### [“修改密码”用例](./UseCase/修改密码.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/修改密码.html)
+- ### [“修改用户信息”用例](./UseCase/修改用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/修改用户信息.html)
+- ### [“查看用户信息”用例](./UseCase/查看用户信息.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/查看用户信息.html)
+- ### [“教师列表”用例](./UseCase/教师列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/教师列表.html)
+- ### [“课程列表”用例](./UseCase/课程列表.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/课程列表.html)
+- ### [“教师选课”用例](./UseCase/老师选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/教师选课.html)
 - ### [“学生选课”用例](./UseCase/学生选课.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/学生选课.html)
 - ### [“选学期”用例](./UseCase/选学期.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/选学期.html)
-- ### [“登出”用例](./UseCase/登出.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/顶部菜单.html)
+- ### [“登出”用例](./UseCase/登出.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/登出.html)
 - ### [“登录”用例](./UseCase/登录.md),[界面](https://wuchuan11.github.io/is_analysis/test6/ui/登录.html)
     
